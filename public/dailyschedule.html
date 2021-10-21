@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 일정 확인 || 맛있는 지도</title>
+    <!--css 파일 주소-->
+    <link rel="stylesheet" href="./style/dailyschedule.css" />
+    <!--font awesome key-->
+    <script
+      src="https://kit.fontawesome.com/a9ea2ab270.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--firebase auth-->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"
+    ></script>
+    <!--js 파일 주소-->
+    <script defer src="./js/dailyschedule.js"></script>
+    <!--navigation 파일 주소-->
+    <script defer src="./js/nav.js"></script>
+    <!--calender 파일 주소-->
+    <link href="./lib/calendar.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.7.0/main.min.js"></script>
+    <script defer src="./lib/calendar.js"></script>
+    <script defer src="./js/calendar.js"></script>
+  </head>
+  <body>
+    <header class="header nav-header">
+      <div class="header__icon">
+        <img
+          src="./img/nav-logo.png"
+          alt="맛있는지도"
+          class="header__icon-logo"
+        />
+      </div>
+      <div class="header__menu">
+        <span class="header__menu__schedule header__menu__item">일정관리</span>
+        <span class="header__menu__map header__menu__item">지도탐색</span>
+        <span class="header__menu__board header__menu__item">게시판</span>
+        <div class="header__menu__log-out header__menu__item">로그아웃</div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-left">
+        <div class="main__left__calender">
+          <div id="calendar"></div>
+        </div>
+        <div class="main-left__nav">
+          <ul class="main__nav__days"></ul>
+        </div>
+      </section>
+      <section class="main-center"></section>
+      <section class="main-right">
+        <div
+          id="map"
+          style="
+            width: 21vw;
+            height: 23vh;
+            position: fixed;
+            border-radius: 10px;
+          "
+        ></div>
+      </section>
+    </main>
+    <!--kakao map api key-->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bb0e2c5e72624b78f8b77f51fad48e30"
+    ></script>
+    <!--우측 지도 js 파일 주소-->
+    <script src="./js/map.js"></script>
+  </body>
+</html>

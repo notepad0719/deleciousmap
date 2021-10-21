@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 || 맛있는 지도</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"
+    ></script>
+    <script defer src="./js/index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"
+    />
+    <style>
+      Html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./img/login-bg.png');
+      }
+
+      .grandParentContaniner {
+        display: table;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      .parentContainer {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .circle {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin: auto;
+      }
+
+      input[type='text'],
+      input[type='password'] {
+        border: none;
+        outline: none;
+        padding: 0.8em;
+        background-color: white;
+        border-radius: 2em;
+      }
+
+      .loginBtn {
+        border: none;
+        outline: none;
+        padding: 0.5em 1em 0.5em 1em;
+        color: white;
+        background-color: #f47521;
+        border-radius: 2em;
+      }
+
+      table {
+        margin: auto;
+      }
+      td {
+        padding: 10px;
+      }
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grandParentContaniner">
+      <div class="parentContainer">
+        <div style="text-align: center">
+          <img src="./img/login-logo.png" alt="맛있는지도" style="width: 60%" />
+        </div>
+        <div class="box">
+          <form id="loginform" action="#" method="POST">
+            <table>
+              <tr>
+                <td>
+                  <div class="circle">ID</div>
+                </td>
+                <td>
+                  <label for="loginId"></label>
+                  <input
+                    type="text"
+                    id="loginId"
+                    name="loginId"
+                    placeholder="ID"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="circle">PW</div>
+                </td>
+                <td>
+                  <label for="loginPw"></label>
+                  <input
+                    type="password"
+                    id="loginPw"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button class="loginBtn" type="submit">로그인</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="color: white">또는</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <section class="sns-container">
+                    <button id="signInWithGoogle">
+                      <img
+                        src="./img/google.svg"
+                        alt="Sign in with your Google account."
+                      />
+                    </button>
+                    <button id="signInWithTwitter">
+                      <img
+                        src="./img/twitter.svg"
+                        alt="Sign in with your Twitter account."
+                      />
+                    </button>
+                    <button id="signInWithFacebook">
+                      <img
+                        src="./img/facebook.svg"
+                        alt="Sign in with your Facebook account."
+                      />
+                    </button>
+                  </section>
+                </td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td>
+                  <a href="./main.html" style="color: white">회원가입</a>
+                </td>
+                <td><a href="#" style="color: white">ID/PW찾기</a></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
